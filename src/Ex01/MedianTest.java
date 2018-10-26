@@ -5,20 +5,26 @@ public class MedianTest {
 	static int med3(int a, int b, int c) {		
 		int ret;
 		
-		if(a >= b)
-			if(b >= c)
-				ret = b;
-			else if(a <= c)
-				ret = a;
-			else
-				ret = c;
-		else if(a > c)
-			ret = a;
-		else if(b > c)
-			ret = c;
-		else 
-			ret = b;
+//		if(a >= b)
+//			if(b >= c)
+//				ret = b;
+//			else if(a <= c)
+//				ret = a;
+//			else
+//				ret = c;
+//		else if(a > c)
+//			ret = a;
+//		else if(b > c)
+//			ret = c;
+//		else 
+//			ret = b;
 		
+		if((b>=a && c<=a) || (b<=a && c>=a))
+			ret = a;
+		else if((a>=b && c<=b) || (a<=b && c>=b))
+			ret = b;
+		else
+			ret = c;
 		return ret;
 	}
 	
