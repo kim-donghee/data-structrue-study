@@ -31,7 +31,7 @@ public class MedianTest {
 	public static void main(String[] args) {
 		System.out.println(med3(1, 2, 3));
 		System.out.println(med3(2, 1, 3));
-		System.out.println(med3(1, 3, 2));
+		System.out.println(med3(2, 5, 2));
 	}
 
 }
