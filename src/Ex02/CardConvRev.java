@@ -4,8 +4,6 @@ public class CardConvRev {
 	
 	static int cardConvR(int x, int r, char[] d) {
 		
-		String das;
-		
 		int digits = 0;
 		String dchar = "0123456789ABCDEF";
 		
