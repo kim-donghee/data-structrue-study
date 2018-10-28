@@ -9,9 +9,10 @@ public class BinSearch {
 		
 		do {
 			int pc = (pl + pr) / 2;
-			if(a[pc] == key)
+			int value = a[pc];
+			if(value == key)
 				return pc;
-			else if(a[pc] < key)
+			else if(value < key)
 				pl = pc + 1;
 			else
 				pr = pc - 1;
@@ -22,7 +23,7 @@ public class BinSearch {
 	
 	public static void main(String[] args) {
 		
-		int key = 100;
+		int key = 10;
 		int[] x = { 2, 4, 7, 8, 10, 14, 15, 40, 100 };
 		
 		int idx = binSearch(x, x.length, key);
