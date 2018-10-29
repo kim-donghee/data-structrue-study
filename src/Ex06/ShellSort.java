@@ -17,6 +17,7 @@ public class ShellSort {
 				}
 				a[j+h] = tmp;
 			}
+			
 		}
 		
 		return counter;		
