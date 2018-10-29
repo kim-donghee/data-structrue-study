@@ -6,21 +6,37 @@ public class BubbleSort {
 		
 		int counter = 0;
 		int n = a.length;
-		boolean exchg;
 		
-		for(int i=0; i<n; i++) {
-			exchg = false;
-			for(int j=n-1; j>i; j--) {
+		int k = 0;
+		while(k < n-1) {
+			int last = n-1;
+			for(int j=n-1; j>k; j--) {
 				counter++;
 				if(a[j-1] > a[j]) {
 					int temp = a[j-1];
 					a[j-1] = a[j];
 					a[j] = temp;
-					exchg = true;
+					last = j;
 				}
 			}
-			if(!exchg) break;
+			k = last;
 		}
+		
+//		boolean exchg;
+//		
+//		for(int i=0; i<n; i++) {
+//			exchg = false;
+//			for(int j=n-1; j>i; j--) {
+//				counter++;
+//				if(a[j-1] > a[j]) {
+//					int temp = a[j-1];
+//					a[j-1] = a[j];
+//					a[j] = temp;
+//					exchg = true;
+//				}
+//			}
+//			if(!exchg) break;
+//		}
 		
 		System.out.println(counter);
 		
