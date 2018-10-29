@@ -2,7 +2,7 @@ package Ex06;
 
 public class BubbleSort {
 	
-	static void bubbleSort(int[] a) {
+	static int bubbleSort(int[] a) {
 		
 		int counter = 0;
 		int n = a.length;
@@ -38,7 +38,7 @@ public class BubbleSort {
 //			if(!exchg) break;
 //		}
 		
-		System.out.println(counter);
+		return counter;
 		
 	}
 
@@ -55,9 +55,8 @@ public class BubbleSort {
 		for(int v : arr) {
 			System.out.print(v + ", ");
 		}
-		System.out.println();
 		
-		bubbleSort(arr);
+		System.out.println("\n" + bubbleSort(arr));
 		
 		for(int v : arr) {
 			System.out.print(v + ", ");
