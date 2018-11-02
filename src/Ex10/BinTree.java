@@ -161,7 +161,7 @@ public class BinTree<K, V> {
 	}
 	
 	// node를 루트로 하는 서브 트리의 노드를 키 값과 오름차순으로 출력
-	private void printSubTree(Node node) {
+	private void printSubTree(Node<K, V> node) {
 		if(node != null) {
 			printSubTree(node.left);	// 왼쪽 서브 트리를 키 값의 오름차순으로 출력
 			System.out.println(node.key + " " + node.data);
