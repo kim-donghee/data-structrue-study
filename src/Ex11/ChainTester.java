@@ -3,8 +3,9 @@ package Ex11;
 
 public class ChainTester {
 
-	public static void main(String[] args) {
-		ChainHash<Integer, Data> hash = new ChainHash<>(13);
+	public static void main(String[] args) {	
+		OpenHash<Integer, Data> hash = new OpenHash<>();
+//		ChainHash<Integer, Data> hash = new ChainHash<>(13);
 		hash.add(13, new Data(13, "kim"));
 		hash.add(100, new Data(100, "kim"));
 		hash.add(73, new Data(73, "dong"));
@@ -36,6 +37,17 @@ class Data {
 	public Data(Integer no, String name) {
 		this.no = no;
 		this.name = name;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		System.out.println(obj);
+		return no == obj;
+	}
+	
+	@Override
+	public int hashCode() {
+		return no;
 	}
 
 	Integer keyCode() {
